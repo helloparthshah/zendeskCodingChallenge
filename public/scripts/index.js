@@ -24,11 +24,14 @@ function createDiv(ticket) {
         // alert(ticket)
     }
     if (ticket.status == 'open')
-        newDiv.style.backgroundColor = "#ED9998"
+        newDiv.style.backgroundColor = "#f7e5e9"
+    // newDiv.style.backgroundColor = "#ED9998"
     if (ticket.status == 'pending')
-        newDiv.style.backgroundColor = "#A7C7E7"
+        newDiv.style.backgroundColor = "rgb(214, 235, 255)"
+    // newDiv.style.backgroundColor = "#A7C7E7"
     if (ticket.status == 'solved')
-        newDiv.style.backgroundColor = "#D5FFDD"
+        newDiv.style.backgroundColor = "rgb(231, 255, 235)"
+    // newDiv.style.backgroundColor = "#D5FFDD"
     newDiv.innerHTML = ticket.subject;
     return newDiv;
 }
