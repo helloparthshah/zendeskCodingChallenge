@@ -1,0 +1,1 @@
+{"version":"0.0.0","name":"zendeskcodingchallenge","dependencies":{"body-parser":{"version":"1.18.3"},"dotenv":{"version":"10.0.0"},"ejs":{"version":"3.1.6"},"express":{"version":"4.16.4"},"http-errors":{"version":"1.6.3"},"nodemon":{"version":"2.0.15"}}}
