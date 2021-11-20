@@ -15,16 +15,21 @@
         <h1>Ticket</h1>
         <div class="ticket">
             <h2 id="no"></h2>
+            <h2 id="date"></h2>
             <h2 id="status"></h2>
             <h3 id="subject"></h3>
             <div id="desc"></div>
         </div>
-        <button onclick="window.history.back()">Back</button>
+        <button class="btn" onclick="window.history.back()">Back</button>
     </div>
     <script>
         let ticket = JSON.parse(localStorage.getItem("ticket"))
         console.log(ticket)
+        let date = new Date(ticket.created_at);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+        console.log(date.toLocaleDateString(undefined, options))
         document.getElementById('no').innerHTML = "Ticket Number: " + ticket.id
+        document.getElementById('date').innerHTML = "Created at: " + date.toLocaleDateString(undefined, options)
         document.getElementById('status').innerHTML = "Status: " + ticket.status
         document.getElementById('subject').innerHTML = ticket.subject
         document.getElementById('desc').innerHTML = ticket.description
