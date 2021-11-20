@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 const bodyParser = require("body-parser");
 var express = require('express');
+require('dotenv').config({
+  path: './TEST.env'
+})
 
 var app = express();
 
@@ -36,7 +39,7 @@ app.get('/tickets', function (req, res, next) {
   var request = require('request');
   var options = {
     method: 'GET',
-    url: 'https://zcc8996.zendesk.com/api/v2/tickets.json',
+    url: process.env.ZENDESK_URL,
     qs: {
       'sort_by': 'created_at',
       'sort_order': 'desc',
@@ -46,7 +49,7 @@ app.get('/tickets', function (req, res, next) {
     headers: {
       'cache-control': 'no-cache',
       'content-type': 'application/json',
-      'authorization': 'Basic ' + new Buffer.from(process.env.username + ':' + process.env.password).toString('base64')
+      'authorization': 'Basic ' + new Buffer.from(process.env.EMAIL_ID + ':' + process.env.EMAIL_PASSWORD).toString('base64')
     }
   }
 
