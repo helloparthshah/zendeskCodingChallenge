@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+    <div id="tickets">
+        <h1>Ticket</h1>
+        <div class="ticket">
+            <h2 id="no"></h2>
+            <h2 id="status"></h2>
+            <h3 id="subject"></h3>
+            <div id="desc"></div>
+        </div>
+        <button onclick="window.history.back()">Back</button>
+    </div>
+    <script>
+        let ticket = JSON.parse(localStorage.getItem("ticket"))
+        console.log(ticket)
+        document.getElementById('no').innerHTML = "Ticket Number: " + ticket.id
+        document.getElementById('status').innerHTML = "Status: " + ticket.status
+        document.getElementById('subject').innerHTML = ticket.subject
+        document.getElementById('desc').innerHTML = ticket.description
+    </script>
+</body>
+
+</html>

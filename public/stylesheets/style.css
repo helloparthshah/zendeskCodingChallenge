@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#tickets {
+  background-color: beige;
+  border-radius: 30px;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ticketList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+}
+
+#controls div,
+p,
+button {
+  margin: 20px;
+}
+
+.ticket {
+  background-color: #3fe0d0;
+  border-radius: 30px;
+  /* height: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.ticket div,
+h2,
+h3 {
+  padding: 20px;
+}
+
+.clickable {
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.clickable:hover {
+  border: 2px solid red;
+}
