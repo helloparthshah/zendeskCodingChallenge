@@ -4,7 +4,7 @@ var path = require('path');
 const bodyParser = require("body-parser");
 var express = require('express');
 require('dotenv').config({
-  path: './TEST.env'
+  path: './pwd.env'
 })
 
 var app = express();
