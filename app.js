@@ -46,7 +46,7 @@ app.get('/tickets', function (req, res, next) {
     headers: {
       'cache-control': 'no-cache',
       'content-type': 'application/json',
-      'authorization': 'Basic ' + new Buffer.from('helloparthshah@gmail.com:xapido123').toString('base64')
+      'authorization': 'Basic ' + new Buffer.from(process.env.username + ':' + process.env.password).toString('base64')
     }
   }
 
