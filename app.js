@@ -54,13 +54,15 @@ app.get('/tickets', function (req, res, next) {
   }
 
   request(options, function (error, response, body) {
-    // console.log(body)
     if (error || !body) {
       next(error);
     } else {
       // Parse to json
       var json = JSON.parse(body);
-      res.json(json);
+      if (json.error) {
+        next(createError(401, json.error));
+      } else
+        res.json(json);
     }
   });
 });

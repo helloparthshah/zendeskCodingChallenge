@@ -40,6 +40,7 @@ function getTickets(pg) {
     document.getElementById('ticketList').innerHTML = ""
     fetch(`/tickets?page=${pg}&per_page=25`)
         .then((response) => {
+            console.log(response)
             if (!response.ok) {
                 const newDiv = document.createElement("div");
                 newDiv.classList += "ticket";
