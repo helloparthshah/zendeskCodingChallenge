@@ -36,6 +36,11 @@ app.get('/tickets', function (req, res, next) {
   let page = req.query.page;
   let per_page = req.query.per_page;
 
+  if (!page || !per_page) {
+    next(createError(400, 'page and per_page query params are required'));
+    return;
+  }
+
   var request = require('request');
   var options = {
     method: 'GET',
@@ -112,3 +117,5 @@ function onError(error) {
       throw error;
   }
 }
+
+module.exports = app;
