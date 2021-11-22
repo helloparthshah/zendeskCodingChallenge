@@ -1,5 +1,7 @@
 # zendeskCodingChallenge
 A Node.js app using Express.
+
+Unit testing is done using Mocha and Chai.
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
